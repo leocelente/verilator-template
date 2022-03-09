@@ -1,0 +1,4 @@
+.cache/
+build/
+obj_dir/
+compile_commands.json

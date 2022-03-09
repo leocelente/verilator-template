@@ -1,0 +1,3 @@
+alias config="cmake -B build ."
+alias compile="cmake --build build --config Debug -j `nproc`"
+alias execute="./build/Vtop"
