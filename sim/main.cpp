@@ -5,10 +5,10 @@
 // Include model header, generated from Verilating "top.v"
 #include "Vtop.h"
 
-struct Top {
+struct DUT {
   std::unique_ptr<Vtop> top;
 
-  [[nodiscard]] Top() { top = std::make_unique<Vtop>(); }
+  [[nodiscard]] DUT() { top = std::make_unique<Vtop>(); }
 
   void run() {
     while (!Verilated::gotFinish()) {
@@ -17,14 +17,14 @@ struct Top {
     }
   }
 
-  ~Top() { top->final(); }
+  ~DUT() { top->final(); }
 };
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv,
          [[maybe_unused]] char **env) {
 
-  Top top{};
-  top.run();
+  DUT dut{};
+  dut.run();
 
   return 0;
 }
