@@ -10,8 +10,8 @@ execute_process(
     )
 
 find_package(verilator HINTS $ENV{VERILATOR_ROOT})
-add_executable(Vtop sim_main.cpp)
+add_executable(Vtop sim/main.cpp)
 # Run verilator command on SystemVerilog sources
-verilate(Vtop SOURCES top.sv)
+verilate(Vtop SOURCES src/top.sv)
 # Lets use C++17 for modern features
 target_compile_features(Vtop PRIVATE cxx_std_17)
