@@ -16,6 +16,6 @@ endif()
 
 add_executable(Vtop sim/main.cpp)
 # Run verilator command on SystemVerilog sources
-verilate(Vtop SOURCES src/top.sv)
+verilate(Vtop TRACE SOURCES src/top.sv)
 # Lets use C++17 for modern features
 target_compile_features(Vtop PRIVATE cxx_std_17)
