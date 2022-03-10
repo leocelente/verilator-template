@@ -2,3 +2,7 @@
 build/
 obj_dir/
 compile_commands.json
+waves/
+logs/
+**/*.vcd
+.gdb_history
