@@ -10,6 +10,10 @@ execute_process(
     )
 
 find_package(verilator HINTS $ENV{VERILATOR_ROOT})
+if (NOT verilator_FOUND)
+  message(FATAL_ERROR "Verilator was not found. Either install it, or set the VERILATOR_ROOT environment variable")
+endif()
+
 add_executable(Vtop sim/main.cpp)
 # Run verilator command on SystemVerilog sources
 verilate(Vtop SOURCES src/top.sv)
