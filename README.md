@@ -26,13 +26,15 @@ This is based on the short aliases. But they are nothing much, just:
 alias config="cmake -B build ."
 alias compile="cmake --build build --config Debug -j `nproc`"
 alias execute="./build/Vtop"
-alias view="gtkwave *.vcd"
+alias view="gtkwave waves/*.vcd"
 ```
 
 ## Notes
-If GTKWave signals are small the screen, add this to a `~/.gtkwaverc` config file:
+If GTKWave signals are small on the screen, add this to a `~/.gtkwaverc` config file:
 ```
 fontname_signals Monospace 12
 fontname_waves Monospace 12
 ```
+
+
 
