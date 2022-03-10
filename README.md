@@ -1,6 +1,5 @@
-# SystemVerilog Template
-This is a template repository to jumpstart SystemVerilog HDL projects based 
-on the Verilator simulator.
+# Verilator Template
+This is a template repository to jumpstart (System)Verilog HDL projects based on the Verilator simulator.
 
 ## Dependencies
 I don't use any specific version of Verilator (yet), so the default debian package should be enough.
