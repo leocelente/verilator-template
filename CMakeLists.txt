@@ -14,7 +14,7 @@ if (NOT verilator_FOUND)
   message(FATAL_ERROR "Verilator was not found. Either install it, or set the VERILATOR_ROOT environment variable")
 endif()
 
-add_executable(Vtop sim/main.cpp)
+add_executable(Vtop sim/DUT.hpp sim/main.cpp)
 # Run verilator command on SystemVerilog sources
 verilate(Vtop TRACE SOURCES src/top.sv)
 # Lets use C++17 for modern features
